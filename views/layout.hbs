@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>My app</title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <nav>
+    <div class="wrapper">
+      <a href="/">Home</a>
+      {{#if isUserLoggedIn}}
+      <a href="/secret">Protected page</a>
+      <a href="/logout">Logout</a>
+      {{else}}
+      <a href="/signup">Sign up</a>
+      <a href="/login">Login</a>
+      {{/if}}
+    </div>
+  </nav>
+  <div class="container">
+    {{{body}}}
+  </div>
+</body>
+
+</html>
